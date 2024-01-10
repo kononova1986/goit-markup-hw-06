@@ -12,6 +12,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     background-color: #ffffff;
+    margin: 0 auto;
 }
 
 h1,
@@ -39,7 +40,7 @@ a {
 }
 
 .container {
-    width: 1158px;
+    max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px 0 15px;
 }
@@ -126,6 +127,7 @@ a {
     font-style: normal;
     font-size: 16px;
     line-height: 24px;
+    padding-left: 332px;
 }
 .contacts-list {
     display: flex;
@@ -142,6 +144,137 @@ a {
 .contacts-link-mail-tell:hover,
 .contacts-link-mail-tell:focus {
     color: #404bbf;
+}
+.header-burger {
+    display: none;
+}
+.menu-container-mobaile {
+    display: none;
+}
+/*---------------------------------Стили для мобильного ШАПКА меню--------------------------------*/
+@media (max-width: 320px) {
+    .hedader {
+        position: relative;
+        width: 320px;
+        height: 56px;
+    }
+    .container-hedader {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .header-burger {
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+    .menu-item-link {
+        display: none;
+    }
+    .contacts {
+        display: none;
+    }
+    .menu-link {
+        padding: 16px;
+    }
+
+    .menu-container-mobaile {
+        position: fixed;
+        display: block;
+        width: 320px;
+        height: 640px;
+        background-color: #fff;
+        opacity: 0;
+    }
+    .mobaile-btn-close {
+        display: flex;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0;
+        cursor: pointer;
+    }
+    .menu-list-mobaile {
+        padding-top: 72px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding-top: 72px;
+    }
+
+    .menu-item-link-mobaile {
+        padding-left: 16px;
+        color: #2e2f42;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.1em;
+        letter-spacing: 0.02em;
+    }
+    .studio-mobaile {
+        color: #404bbf;
+    }
+
+    .contacts-list-mobaile {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding-top: 168px;
+    }
+    .contacts-link-mail,
+    .contacts-link-tell {
+        padding-left: 16px;
+        color: #434455;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+    .contacts-link-tell {
+        color: #4d5ae5;
+    }
+
+    .social-links-burger {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+        padding-left: 16px;
+        padding-top: 48px;
+    }
+}
+
+/*---------------------------------Стили для планшета ШАПКА меню--------------------------------*/
+@media (min-width: 321px) and (max-width: 768px) {
+    .hedader {
+    }
+    .container-hedader {
+    }
+    .menu-link {
+    }
+    .contacts {
+        padding: 16px 0;
+    }
+    .contacts-list {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .contacts-link {
+        padding: 0;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.04;
+    }
 }
 
 /*Банер*/
@@ -167,13 +300,12 @@ a {
     text-align: center;
     font-size: 56px;
     font-weight: 700;
-    line-height: 60px; /* 107.143% */
-    letter-spacing: 1.12px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
 }
 
 .banner-button {
     display: block;
-    margin: 0 163.5px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -195,10 +327,39 @@ a {
 .banner-button-link {
     color: #fff;
 }
-
+/*---------------------------------Стили для мобильного меню Банер--------------------------------*/
+@media (max-width: 320px) {
+    .banner {
+        width: 320px;
+        height: 432px;
+        flex-shrink: 0;
+    }
+    .container-banner {
+        align-items: center;
+        justify-content: center;
+        width: 288px;
+        gap: 72px;
+    }
+    .banner-title {
+        font-size: 36px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+    }
+    .banner-button {
+        display: inline-flex;
+        padding: 16px 32px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+} /*---------------------------------Стили для планшета Банер меню--------------------------------*/
+@media (min-width: 321px) and (max-width: 768px) {
+}
 /*Скилы*/
 .soft-skills {
     padding: 120px 0;
+}
+.container-skills {
 }
 .visually-hidden {
     display: none;
@@ -217,23 +378,21 @@ a {
     gap: 24px;
 }
 .soft-skills-item {
-    width: calc((100% – 72px) / 4);
-    width: 264px;
-    gap: 8px;
+    width: calc((100% - 72px) / 4);
 }
 .soft-skills-item-title {
     color: #2e2f42;
     margin-bottom: 8px;
     font-size: 20px;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.4px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 .soft-skills-item-text {
     color: #434455;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 .soft-skills-item-icon {
     display: flex;
@@ -246,6 +405,63 @@ a {
     border: 1px solid #8e8f99;
     background: #f4f4fd;
     margin-bottom: 8px;
+}
+/*---------------------------------Стили для мобильного Скилы меню--------------------------------*/
+
+@media (max-width: 320px) {
+    .soft-skills-item-icon {
+        display: none;
+    }
+    .soft-skills-list {
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+    }
+    .soft-skills-item {
+        display: flex;
+        width: 288px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .soft-skills-item-title {
+        align-self: stretch;
+        color: #2e2f42;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.1;
+        text-transform: capitalize;
+    }
+    .soft-skills-item-text {
+        align-self: stretch;
+        font-weight: 500;
+    }
+}
+/*---------------------------------Стили для планшета Скилы меню--------------------------------*/
+
+@media (min-width: 321px) and (max-width: 768px) {
+    .soft-skills-item-icon {
+        display: none;
+    }
+    .soft-skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 72px;
+    }
+    .soft-skills-item {
+        width: calc((100% - 24px) / 2);
+    }
+    .soft-skills-item-text {
+        font-weight: 500;
+    }
+    .soft-skills-item-title {
+        color: #2e2f42;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.1;
+        text-transform: capitalize;
+    }
 }
 
 /*Команда*/
@@ -270,11 +486,7 @@ a {
 .team-item {
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    border-radius: 0px 0px 4px 4px;
+
     background: #fff;
     box-shadow:
         0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -331,6 +543,43 @@ a {
 }
 .icon {
     fill: #f4f4fd;
+}
+/*---------------------------------Стили для мобильного Команда меню--------------------------------*/
+@media (max-width: 320px) {
+    .team-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+    }
+    .team-item {
+        display: flex;
+        width: 264px;
+    }
+    .container-team-item-title {
+        padding: 0;
+        margin-bottom: 32px;
+    }
+}
+/*---------------------------------Стили для планшета Скилы Команда меню--------------------------------*/
+
+@media (min-width: 321px) and (max-width: 768px) {
+    .team-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 64px;
+        justify-content: center;
+        align-items: center;
+    }
+    .team-item {
+        width: calc((100% - 24px) / 2);
+        width: 264px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /*Портфолио*/
@@ -394,7 +643,7 @@ a {
 }
 .container-portfolio-item-title {
     padding: 32px 16px;
-    width: 360px;
+
     height: 120px;
     border-top: none;
     cursor: pointer;
@@ -416,16 +665,56 @@ a {
     color: #2e2f42;
     font-size: 20px;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.4px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     margin-bottom: 8px;
 }
 .portfolio-item-text {
     color: #434455;
     font-family: Roboto;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+/*---------------------------------Стили для мобильного Портфолио меню--------------------------------*/
+@media (max-width: 320px) {
+    .portfolio-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+    }
+    .portfolio-item {
+        display: flex;
+        width: 288px;
+        padding-bottom: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .portfolio-item-img {
+        display: flex;
+        width: 288px;
+        height: 280px;
+    }
+
+    .container-portfolio-item-title {
+        width: 288px;
+    }
+}
+/*---------------------------------Стили для планшета Портфолио меню--------------------------------*/
+@media (min-width: 321px) and (max-width: 768px) {
+    .portfolio-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 32px;
+    }
+    .portfolio-item {
+        width: calc((100% - 24px) / 2);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /*Подвал*/
@@ -437,8 +726,12 @@ a {
     display: flex;
     align-items: baseline;
 }
+.container-footer-text-social {
+    display: flex;
+}
+
 .footer-text {
-    margin-right: 120px;
+    padding-right: 120px;
 }
 
 .down-link {
@@ -471,7 +764,10 @@ a {
     max-width: 264px;
     margin-bottom: 16px;
 }
-
+.social {
+    display: flex;
+    flex-direction: column;
+}
 .social-text {
     color: #fff;
     font-size: 16px;
@@ -558,7 +854,83 @@ a {
 }
 .icon-list {
     fill: #fff;
-    margin-left: 16px;
+}
+/*---------------------------------Стили для мобильного меню--------------------------------*/
+@media (max-width: 320px) {
+    .down {
+        width: 320px;
+        height: 664px;
+    }
+    .container-footer-text-social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+    .container-footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-text {
+        padding-right: 0;
+        align-items: center;
+    }
+    .down-text {
+        padding-bottom: 72px;
+    }
+    .down-link {
+        display: block;
+        text-align: center;
+    }
+    .social {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-conteiner {
+        padding-top: 72px;
+        padding-left: 0;
+    }
+    .footer-conteiner-p {
+        display: block;
+        text-align: center;
+    }
+    .footer-email-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 16px;
+    }
+}
+
+/*---------------------------------Стили для планшета Портфолио меню--------------------------------*/
+@media (min-width: 768px) and (max-width: 1158px) {
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0 auto;
+    }
+    .container-footer-text-social {
+        display: flex;
+        gap: 24px;
+        margin: 0 auto;
+    }
+    .footer-text {
+        padding-right: 0;
+    }
+    .social {
+    }
+    .footer-conteiner {
+        margin: 0 auto;
+        padding-top: 72px;
+        padding-left: 0px;
+        gap: 24px;
+    }
+
 }
 
 /*модальное окно*/
@@ -573,6 +945,7 @@ a {
     transition:
         opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
 }
 .is-open {
 }
@@ -720,7 +1093,7 @@ a {
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
-.form-lebel-span{
+.form-lebel-span {
     position: relative;
     fill: transparent;
     justify-content: center;
@@ -740,20 +1113,16 @@ a {
     fill: #4d5ae5;
 }
 
-.form-title-input-name:checked + label span{
-    background-color: #404BBF;
+.form-title-input-name:checked + label span {
+    background-color: #404bbf;
     border: none;
-    fill: #F4F4FD;
+    fill: #f4f4fd;
 }
-.icon-checket{
+.icon-checket {
     width: 16px;
     height: 16px;
 }
-/*input[type="checkbox"]:checked {
-    background-color:#404BBF;
-    border: none;
-    fill:#F4F4FD;
-}*/
+
 .form-lebel-link {
     color: #4d5ae5;
     text-decoration: underline;
