@@ -154,21 +154,16 @@ a {
 /*---------------------------------Стили для мобильного ШАПКА меню--------------------------------*/
 @media (max-width: 320px) {
     .hedader {
-        position: relative;
-        width: 320px;
-        height: 56px;
     }
     .container-hedader {
         position: relative;
-        width: 100%;
-        height: 100%;
         padding: 0;
     }
     .header-burger {
         display: block;
         position: absolute;
         top: 16px;
-        right: 16px;
+        right: 0;
     }
     .menu-item-link {
         display: none;
@@ -177,13 +172,12 @@ a {
         display: none;
     }
     .menu-link {
-        padding: 16px;
+        padding: 17.5px 0;
     }
 
     .menu-container-mobaile {
         position: fixed;
         display: block;
-        width: 320px;
         height: 640px;
         background-color: #fff;
         opacity: 0;
@@ -255,15 +249,24 @@ a {
 }
 
 /*---------------------------------Стили для планшета ШАПКА меню--------------------------------*/
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 321px) and (max-width: 769px) {
     .hedader {
     }
     .container-hedader {
+        justify-content: center;
+    }
+    .header-burger {
+        display: none;
+    }
+    .menu {
     }
     .menu-link {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 121px;
     }
     .contacts {
-        padding: 16px 0;
+        padding: 16px 0 16px 121px;
     }
     .contacts-list {
         flex-direction: column;
@@ -287,6 +290,14 @@ a {
     background-position: center;
     background-size: cover;
 }
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+.banner {
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office@2x.jpg);
+}
+}
+
 .container-banner {
     display: inline-flex;
     flex-direction: column;
@@ -330,17 +341,16 @@ a {
 /*---------------------------------Стили для мобильного меню Банер--------------------------------*/
 @media (max-width: 320px) {
     .banner {
-        width: 320px;
-        height: 432px;
-        flex-shrink: 0;
-    }
-    .container-banner {
+        padding: 72px 0;
         align-items: center;
         justify-content: center;
-        width: 288px;
-        gap: 72px;
+    }
+    .container-banner {
     }
     .banner-title {
+        max-width: 288px;
+        align-items: center;
+        justify-content: center;
         font-size: 36px;
         line-height: 1.1;
         letter-spacing: 0.02em;
@@ -354,12 +364,35 @@ a {
     }
 } /*---------------------------------Стили для планшета Банер меню--------------------------------*/
 @media (min-width: 321px) and (max-width: 768px) {
+    .banner {
+        padding: 112px 0;
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office@2x.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .container-banner {
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+    }
+    .banner-title {
+        width: 496px;
+    }
+    .banner-button {
+        padding: 16px 32px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+@media (min-resolution: 192dpi) {
+.banner{
+    background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office@2x.jpg");
+}
 }
 /*Скилы*/
 .soft-skills {
     padding: 120px 0;
-}
-.container-skills {
 }
 .visually-hidden {
     display: none;
@@ -409,6 +442,9 @@ a {
 /*---------------------------------Стили для мобильного Скилы меню--------------------------------*/
 
 @media (max-width: 320px) {
+    .soft-skills {
+        padding: 96px 0;
+    }
     .soft-skills-item-icon {
         display: none;
     }
@@ -419,7 +455,7 @@ a {
     }
     .soft-skills-item {
         display: flex;
-        width: 288px;
+        min-width: 288px;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
@@ -441,6 +477,9 @@ a {
 /*---------------------------------Стили для планшета Скилы меню--------------------------------*/
 
 @media (min-width: 321px) and (max-width: 768px) {
+    .soft-skills {
+        padding: 96px 0;
+    }
     .soft-skills-item-icon {
         display: none;
     }
@@ -448,9 +487,12 @@ a {
         display: flex;
         flex-wrap: wrap;
         row-gap: 72px;
+        justify-content: center;
+        align-items: center;
     }
     .soft-skills-item {
         width: calc((100% - 24px) / 2);
+        gap: 8px;
     }
     .soft-skills-item-text {
         font-weight: 500;
@@ -486,7 +528,6 @@ a {
 .team-item {
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
-
     background: #fff;
     box-shadow:
         0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -494,8 +535,7 @@ a {
         0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .container-team-item-title {
-    padding: 32px 0;
-    margin: 0 16px;
+    padding: 32px 16px;
 }
 
 .team-item-title {
@@ -513,7 +553,7 @@ a {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.32px;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 .social-links {
     display: flex;
@@ -546,6 +586,9 @@ a {
 }
 /*---------------------------------Стили для мобильного Команда меню--------------------------------*/
 @media (max-width: 320px) {
+    .team {
+        padding: 96px 0;
+    }
     .team-list {
         display: flex;
         flex-direction: column;
@@ -554,17 +597,16 @@ a {
         gap: 72px;
     }
     .team-item {
-        display: flex;
+        flex-direction: column;
         width: 264px;
-    }
-    .container-team-item-title {
-        padding: 0;
-        margin-bottom: 32px;
     }
 }
 /*---------------------------------Стили для планшета Скилы Команда меню--------------------------------*/
 
 @media (min-width: 321px) and (max-width: 768px) {
+    .team {
+        padding: 96px 0;
+    }
     .team-list {
         display: flex;
         flex-wrap: wrap;
@@ -585,7 +627,7 @@ a {
 /*Портфолио*/
 .portfolio {
     background: #fff;
-    padding: 120px 0 120px 0;
+    padding: 120px 0;
 }
 .portfolio-title {
     color: #2e2f42;
@@ -678,6 +720,9 @@ a {
 }
 /*---------------------------------Стили для мобильного Портфолио меню--------------------------------*/
 @media (max-width: 320px) {
+    .portfolio {
+        padding: 96px 0;
+    }
     .portfolio-list {
         display: flex;
         flex-direction: column;
@@ -693,9 +738,7 @@ a {
         align-items: flex-start;
     }
     .portfolio-item-img {
-        display: flex;
-        width: 288px;
-        height: 280px;
+        
     }
 
     .container-portfolio-item-title {
@@ -704,6 +747,9 @@ a {
 }
 /*---------------------------------Стили для планшета Портфолио меню--------------------------------*/
 @media (min-width: 321px) and (max-width: 768px) {
+    .portfolio {
+        padding: 96px 0;
+    }
     .portfolio-list {
         display: flex;
         flex-wrap: wrap;
@@ -858,8 +904,14 @@ a {
 /*---------------------------------Стили для мобильного меню--------------------------------*/
 @media (max-width: 320px) {
     .down {
-        width: 320px;
-        height: 664px;
+        padding: 96px 0;
+        
+    }
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .container-footer-text-social {
         display: flex;
@@ -868,17 +920,12 @@ a {
         align-items: center;
         gap: 24px;
     }
-    .container-footer {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     .footer-text {
         padding-right: 0;
         align-items: center;
     }
     .down-text {
-        padding-bottom: 72px;
+        margin-bottom: 72px;
     }
     .down-link {
         display: block;
@@ -890,8 +937,8 @@ a {
         text-align: center;
     }
     .footer-conteiner {
-        padding-top: 72px;
-        padding-left: 0;
+        margin-top: 72px;
+        padding-left: 0px;
     }
     .footer-conteiner-p {
         display: block;
@@ -902,35 +949,33 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 16px;
     }
 }
 
-/*---------------------------------Стили для планшета Портфолио меню--------------------------------*/
-@media (min-width: 768px) and (max-width: 1158px) {
+/*---------------------------------Стили для планшета  ПОДВАЛ  --------------------------------*/
+@media (min-width: 321px) and (max-width: 768px) {
+    .down {
+        padding: 96px 0;
+    }
     .container-footer {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        margin: 0 auto;
+        margin-left: 92px;
+        
+        
     }
     .container-footer-text-social {
         display: flex;
         gap: 24px;
-        margin: 0 auto;
     }
     .footer-text {
         padding-right: 0;
     }
-    .social {
-    }
     .footer-conteiner {
-        margin: 0 auto;
         padding-top: 72px;
         padding-left: 0px;
         gap: 24px;
     }
-
 }
 
 /*модальное окно*/
