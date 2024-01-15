@@ -152,7 +152,7 @@ a {
     display: none;
 }
 /*---------------------------------Стили для мобильного ШАПКА меню--------------------------------*/
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 768px)  {
     .hedader {
     }
     .container-hedader {
@@ -163,7 +163,7 @@ a {
         display: block;
         position: absolute;
         top: 16px;
-        right: 0;
+        right: 16px;
     }
     .menu-item-link {
         display: none;
@@ -249,7 +249,7 @@ a {
 }
 
 /*---------------------------------Стили для планшета ШАПКА меню--------------------------------*/
-@media (min-width: 321px) and (max-width: 769px) {
+@media (min-width: 769px) and (max-width: 1158px) {
     .hedader {
     }
     .container-hedader {
@@ -290,12 +290,13 @@ a {
     background-position: center;
     background-size: cover;
 }
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-.banner {
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .banner{
+    background-image:  linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/people-office@2x.jpg);
-}
+  }
 }
 
 .container-banner {
@@ -339,7 +340,7 @@ a {
     color: #fff;
 }
 /*---------------------------------Стили для мобильного меню Банер--------------------------------*/
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 768px){
     .banner {
         padding: 72px 0;
         align-items: center;
@@ -363,7 +364,7 @@ a {
         gap: 10px;
     }
 } /*---------------------------------Стили для планшета Банер меню--------------------------------*/
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1158px) {
     .banner {
         padding: 112px 0;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -441,7 +442,7 @@ a {
 }
 /*---------------------------------Стили для мобильного Скилы меню--------------------------------*/
 
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 768px) {
     .soft-skills {
         padding: 96px 0;
     }
@@ -451,13 +452,14 @@ a {
     .soft-skills-list {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 72px;
     }
     .soft-skills-item {
         display: flex;
         min-width: 288px;
         flex-direction: column;
-        align-items: flex-start;
         gap: 8px;
     }
     .soft-skills-item-title {
@@ -476,7 +478,7 @@ a {
 }
 /*---------------------------------Стили для планшета Скилы меню--------------------------------*/
 
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1158px) {
     .soft-skills {
         padding: 96px 0;
     }
@@ -585,7 +587,7 @@ a {
     fill: #f4f4fd;
 }
 /*---------------------------------Стили для мобильного Команда меню--------------------------------*/
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 768px) {
     .team {
         padding: 96px 0;
     }
@@ -603,7 +605,7 @@ a {
 }
 /*---------------------------------Стили для планшета Скилы Команда меню--------------------------------*/
 
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1158px) {
     .team {
         padding: 96px 0;
     }
@@ -719,7 +721,7 @@ a {
     letter-spacing: 0.02em;
 }
 /*---------------------------------Стили для мобильного Портфолио меню--------------------------------*/
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 768px) {
     .portfolio {
         padding: 96px 0;
     }
@@ -746,7 +748,7 @@ a {
     }
 }
 /*---------------------------------Стили для планшета Портфолио меню--------------------------------*/
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1158px) {
     .portfolio {
         padding: 96px 0;
     }
@@ -902,7 +904,7 @@ a {
     fill: #fff;
 }
 /*---------------------------------Стили для мобильного меню--------------------------------*/
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 768px) {
     .down {
         padding: 96px 0;
         
@@ -953,7 +955,7 @@ a {
 }
 
 /*---------------------------------Стили для планшета  ПОДВАЛ  --------------------------------*/
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1158px) {
     .down {
         padding: 96px 0;
     }
