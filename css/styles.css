@@ -149,7 +149,9 @@ a {
     display: none;
 }
 .menu-container-mobaile {
-    transform: translateY(0);
+   display: none;
+   /*Если я тут оставляю transform: translateY(0%), то на диктопном экране в углу у меня появляется 
+   мобильное меню, поэтому оставила none*/
 }
 /*---------------------------------Стили для мобильного ШАПКА меню--------------------------------*/
 @media (min-width: 320px) and (max-width: 768px) {
