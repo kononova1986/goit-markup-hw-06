@@ -40,10 +40,23 @@ a {
 }
 
 .container {
-    max-width: 1158px;
+    width: 1158px;
     margin: 0 auto;
     padding: 0 15px 0 15px;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+.container {
+    width: 320px;
+}
+}
+@media (min-width: 768px) and (max-width: 1157px) {
+.container {
+    width: 768px;
+}
+}
+
+
+
 /*Обнуляющий стиль*/
 
 /*Шапка*/
@@ -151,11 +164,10 @@ a {
 .menu-container-mobaile {
    display: none;
 }
-   /*Если я тут оставляю transform: translateY(0%), то на диктопном экране в углу у меня появляется 
-   мобильное меню, поэтому оставила none*/
+   /*Если я тут оставляю transform: translateY(0%), то на диктопном экране в углу у меня появляется*/
 
 /*---------------------------------Стили для мобильного ШАПКА меню--------------------------------*/
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .hedader {
     }
     .container-hedader {
@@ -166,13 +178,16 @@ a {
         display: block;
         position: absolute;
         top: 16px;
-        right: 0;
+        right: 16px;
     }
     .menu-item-link {
         display: none;
     }
     .contacts {
         display: none;
+    }
+    .menu{
+        padding-left:16px;
     }
     .menu-link {
         padding: 17.5px 0;
@@ -183,7 +198,11 @@ a {
         top: 0;
         left: 0;
         width: 100%;
+        height: 100%;
         background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
         opacity: 0;
         transform: translateY(100%);
     }
@@ -203,12 +222,12 @@ a {
         cursor: pointer;
     }
     .menu-list-mobaile {
-        padding-top: 72px;
         display: inline-flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 40px;
-        padding-top: 72px;
+        margin-bottom: auto;
+        
     }
 
     .menu-item-link-mobaile {
@@ -224,11 +243,10 @@ a {
     }
 
     .contacts-list-mobaile {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        padding-top: 168px;
     }
     .contacts-link-mail,
     .contacts-link-tell {
@@ -254,7 +272,7 @@ a {
 }
 
 /*---------------------------------Стили для планшета ШАПКА меню--------------------------------*/
-@media (min-width: 769px) and (max-width: 1158px) {
+@media (min-width: 768px) and (max-width: 1157px) {
     .container-hedader {
         justify-content: center;
     }
@@ -286,13 +304,14 @@ a {
 
 /*Банер*/
 .banner {
-    display: flex;
     padding: 188px 0;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .banner {
@@ -302,8 +321,9 @@ a {
 }
 
 .container-banner {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 48px;
 }
@@ -342,7 +362,7 @@ a {
     color: #fff;
 }
 /*---------------------------------Стили для мобильного меню Банер--------------------------------*/
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .banner {
         padding: 72px 0;
         align-items: center;
@@ -363,7 +383,6 @@ a {
     .container-banner {
     }
     .banner-title {
-        max-width: 288px;
         align-items: center;
         justify-content: center;
         font-size: 36px;
@@ -380,7 +399,7 @@ a {
 }
 
 /*---------------------------------Стили для планшета Банер меню--------------------------------*/
-@media (min-width: 769px) and (max-width: 1158px) {
+@media (min-width: 768px) and (max-width: 1157px) {
     .banner {
         padding: 112px 0;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -399,9 +418,7 @@ a {
         justify-content: center;
         gap: 36px;
     }
-    .banner-title {
-        width: 496px;
-    }
+
     .banner-button {
         padding: 16px 32px;
         align-items: flex-start;
@@ -459,7 +476,7 @@ a {
 }
 /*---------------------------------Стили для мобильного Скилы меню--------------------------------*/
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .soft-skills {
         padding: 96px 0;
     }
@@ -474,7 +491,6 @@ a {
         gap: 72px;
     }
     .soft-skills-item {
-        display: flex;
         min-width: 288px;
         flex-direction: column;
         gap: 8px;
@@ -495,7 +511,7 @@ a {
 }
 /*---------------------------------Стили для планшета Скилы меню--------------------------------*/
 
-@media (min-width: 769px) and (max-width: 1158px) {
+@media (min-width: 768px) and (max-width: 1157px) {
     .soft-skills {
         padding: 96px 0;
     }
@@ -604,7 +620,7 @@ a {
     fill: #f4f4fd;
 }
 /*---------------------------------Стили для мобильного Команда меню--------------------------------*/
-@media (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .team {
         padding: 96px 0;
     }
@@ -622,7 +638,7 @@ a {
 }
 /*---------------------------------Стили для планшета Скилы Команда меню--------------------------------*/
 
-@media (min-width: 769px) and (max-width: 1158px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
     .team {
         padding: 96px 0;
     }
@@ -661,17 +677,10 @@ a {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
+    gap: 48px 24px;
 }
 
 .portfolio-item {
-    width: calc((100% - 48px) / 3);
-    line-height: 1.11;
-    background: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover {
@@ -704,8 +713,6 @@ a {
 }
 .container-portfolio-item-title {
     padding: 32px 16px;
-
-    height: 120px;
     border-top: none;
     cursor: pointer;
     border: 1px solid #e7e9fc;
@@ -738,7 +745,7 @@ a {
     letter-spacing: 0.02em;
 }
 /*---------------------------------Стили для мобильного Портфолио меню--------------------------------*/
-@media (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .portfolio {
         padding: 96px 0;
     }
@@ -750,9 +757,7 @@ a {
         gap: 48px;
     }
     .portfolio-item {
-        display: flex;
         width: 288px;
-        padding-bottom: 32px;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -760,21 +765,22 @@ a {
     }
 
     .container-portfolio-item-title {
-        width: 288px;
+     
     }
 }
 /*---------------------------------Стили для планшета Портфолио меню--------------------------------*/
-@media (min-width: 768px) and (max-width: 1158px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
     .portfolio {
         padding: 96px 0;
     }
     .portfolio-list {
         display: flex;
         flex-wrap: wrap;
-        row-gap: 32px;
+        gap: 48px 24px;
     }
     .portfolio-item {
         width: calc((100% - 24px) / 2);
+        width: 356px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -789,6 +795,7 @@ a {
 .container-footer {
     display: flex;
     align-items: baseline;
+    
 }
 .container-footer-text-social {
     display: flex;
@@ -826,7 +833,6 @@ a {
     line-height: 24px;
     letter-spacing: 0.32px;
     max-width: 264px;
-    margin-bottom: 16px;
 }
 .social {
     display: flex;
@@ -920,7 +926,7 @@ a {
     fill: #fff;
 }
 /*---------------------------------Стили для мобильного меню--------------------------------*/
-@media (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .down {
         padding: 96px 0;
     }
@@ -935,14 +941,14 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 24px;
+        gap:72px;
     }
     .footer-text {
         padding-right: 0;
         align-items: center;
     }
     .down-text {
-        margin-bottom: 72px;
+     
     }
     .down-link {
         display: block;
@@ -970,7 +976,7 @@ a {
 }
 
 /*---------------------------------Стили для планшета  ПОДВАЛ  --------------------------------*/
-@media (min-width: 769px) and (max-width: 1158px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
     .down {
         padding: 96px 0;
     }
@@ -987,7 +993,7 @@ a {
         padding-right: 0;
     }
     .footer-conteiner {
-        padding-top: 72px;
+        margin-top: 72px;
         padding-left: 0px;
         gap: 24px;
     }
@@ -1010,9 +1016,9 @@ a {
     pointer-events: none;
 }
 .is-open {
-    opacity: 1;
+    /*opacity: 1;
     visibility: visible;
-    pointer-events: auto;
+    pointer-events: auto;*/
 }
 
 .popup-body {
@@ -1198,6 +1204,7 @@ a {
     padding: 16px 32px;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
     gap: 10px;
     min-width: 169px;
     height: 56px;
@@ -1219,12 +1226,11 @@ a {
     background: #404bbf;
 }
 /*--------------------------------модальное окно мобильное----------------------------------*/
-@media (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .popup-body {
         width: 288px;
         height: 623px;
         flex-shrink: 0;
     }
-    .form-lebel-checkbox {
-    }
+
 }
