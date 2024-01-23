@@ -160,9 +160,14 @@ a {
 }
 .header-burger {
     display: none;
+
 }
-.menu-container-mobaile {
-   display: none;
+.menu-container-mobaile{
+    display: none;
+}
+.menu-container-mobaile.is-open{
+    transform: translateY(0);
+    transition: transform 250ms ease-in-out;
 }
    /*Если я тут оставляю transform: translateY(0%), то на диктопном экране в углу у меня появляется*/
 
@@ -203,8 +208,8 @@ a {
         display: flex;
         flex-direction: column;
         padding: 30px;
-        opacity: 0;
-        transform: translateY(100%);
+        padding-top: 72px;
+        transform: translateY(-100%);
     }
     .mobaile-btn-close {
         display: flex;
@@ -265,9 +270,8 @@ a {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        gap: 40px;
-        padding-left: 16px;
-        padding-top: 48px;
+        gap: 30px;
+        margin-top: 48px;
     }
 }
 
@@ -802,7 +806,7 @@ a {
 }
 
 .footer-text {
-    padding-right: 120px;
+    margin-right: 120px;
 }
 
 .down-link {
@@ -872,7 +876,7 @@ a {
 }
 
 .footer-conteiner {
-    padding-left: 80px;
+    margin-left: 80px;
 }
 .footer-conteiner-p {
     margin-bottom: 16px;
@@ -983,7 +987,7 @@ a {
     .container-footer {
         display: flex;
         flex-direction: column;
-        margin-left: 92px;
+        max-width: 530px;
     }
     .container-footer-text-social {
         display: flex;
